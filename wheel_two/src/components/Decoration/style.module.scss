@@ -1,0 +1,54 @@
+@use '@/shared/styles/variables.scss' as variables;
+
+.decoration {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+
+	&__chip {
+		position: absolute;
+		z-index: 5;
+		&_first {
+			top: 0;
+			left: 20%;
+			@media (max-width: 1750px) {
+				max-width: 300px;
+				left: 0;
+			}
+			@media (max-width: 920px) {
+				top: 13%;
+				left: -10%;
+			}
+		}
+
+		&_second {
+			bottom: 0;
+			left: 0;
+		}
+
+		&_third {
+			bottom: 0;
+			right: 0;
+		}
+	}
+
+	&__girl {
+		position: absolute;
+		bottom: 0;
+		left: 7%;
+		@media (max-width: 1750px) {
+			left: -5%;
+			bottom: 25%;
+			max-width: 400px;
+		}
+		@media (max-width: 920px) {
+			bottom: 25%;
+			max-width: 700px;
+			left: -15%;
+			z-index: 7;
+		}
+	}
+}

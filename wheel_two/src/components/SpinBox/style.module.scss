@@ -1,0 +1,57 @@
+@use '@/shared/styles/variables.scss' as variables;
+
+.box {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+.background {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		@media (max-width: 920px) {
+			object-fit: cover;
+		}
+	}
+
+	&__shadow {
+		width: 100vw;
+		height: 541px;
+		background: linear-gradient(
+			to bottom,
+			variables.$primary-black 0%,
+			rgba(variables.$primary-black, 0) 100%
+		);
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.8;
+	}
+
+	&__shadow_img {
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.wheel__shadow {
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	@media (max-width: 1750px) {
+		display: none;
+	}
+}

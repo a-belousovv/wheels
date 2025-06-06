@@ -1,0 +1,191 @@
+@use '@/shared/styles/variables.scss' as variables;
+
+.box {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+
+	&__active {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
+.background {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 45;
+	@media (max-width: 920px) {
+		object-fit: cover;
+	}
+	&__shadow {
+		width: 100%;
+		height: 541px;
+		background: linear-gradient(
+			variables.$primary-black 0%,
+			rgba(variables.$primary-black, 0) 100%
+		);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 45;
+	}
+	@media (max-width: 920px) {
+		object-fit: cover;
+		object-position: left;
+	}
+}
+
+.content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 53px;
+	position: relative;
+	z-index: 45;
+	&__title {
+		color: variables.$primary-white;
+		font-family: variables.$inter;
+		font-size: 96px;
+		font-weight: 600;
+		@media (max-width: 920px) {
+			font-size: 128px;
+		}
+	}
+	@media (max-width: 920px) {
+		padding-top: 200px;
+	}
+}
+
+.form {
+	width: 100%;
+	max-width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 36px 40px 77px 40px;
+	border: 5px solid variables.$secondary-pink;
+	background-color: rgba($color: variables.$primary-black, $alpha: 0.5);
+	z-index: 45;
+	border-radius: 15px;
+
+	@media (max-width: 920px) {
+		max-width: 705px;
+		padding: 60px 70px 137px 70px;
+	}
+	&__country {
+		padding: 15px;
+		max-width: 61px;
+		background-color: variables.$secondary-black;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 5px;
+		margin-top: 16px;
+
+		&_box {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+
+		&:first-child {
+			margin-top: 20px;
+		}
+	}
+	&__label {
+		font-size: 12px;
+		font-weight: 600;
+		font-family: variables.$inter;
+		color: variables.$primary-white;
+	}
+
+	&__input {
+		width: 100%;
+		font-family: variables.$cera_medium;
+		font-weight: 500;
+		font-size: 13px;
+		padding: 15px;
+		background-color: variables.$secondary-black;
+		border: none;
+		border-radius: 8px;
+		color: variables.$primary-white;
+		border: 1px solid rgba($color: #d1a4ff, $alpha: 0.05);
+		outline: none;
+	}
+
+	&__input_box {
+		width: 100%;
+		position: relative;
+	}
+
+	&__input_eye {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+	}
+	&__input_password {
+		letter-spacing: 2px;
+		width: 100%;
+	}
+
+	&__button {
+		width: 100%;
+		padding: 12px 0px;
+		background-color: variables.$secondary-purple;
+		font-family: variables.$cera_bold;
+		font-size: 14px;
+		font-weight: 700;
+		border: none;
+		outline: none;
+		margin-top: 25px;
+		border-radius: 5px;
+		color: variables.$primary-white;
+	}
+}
+
+.switcher {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 5px;
+	background-color: variables.$secondary-black;
+	border: 1px solid rgba($color: variables.$primary-purple, $alpha: 0.1);
+	border-radius: 6px;
+
+	&__item {
+		padding: 10px 0px;
+		color: variables.$primary-white;
+		font-family: variables.$cera_bold;
+		font-weight: 700;
+		font-size: 14px;
+		background: none;
+		outline: none;
+		border: none;
+		width: 49%;
+	}
+
+	&__active {
+		background-color: variables.$primary-gray;
+		border-radius: 5px;
+		transition: all 0.3s ease;
+	}
+}

@@ -1,0 +1,51 @@
+@use '@/shared/styles/variables.scss' as variables;
+
+.content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 53px;
+	position: relative;
+	z-index: 3;
+
+	@media (max-width: 920px) {
+		padding-top: 200px;
+		z-index: 0;
+	}
+	&__title {
+		font-family: variables.$inter;
+		font-size: 96px;
+		font-weight: 600;
+		color: variables.$primary-white;
+		line-height: 116px;
+		margin-bottom: 30px;
+		@media (max-width: 920px) {
+			font-size: 128px;
+			line-height: 155px;
+		}
+	}
+	&__subtitle {
+		font-family: variables.$cera;
+		font-size: 32px;
+		color: variables.$primary-white;
+		margin-bottom: 22px;
+		@media (max-width: 920px) {
+			font-size: 48px;
+			line-height: 60px;
+		}
+	}
+	&__text {
+		padding: 20px 40px;
+		background-color: variables.$primary-pink;
+		font-family: variables.$cera;
+		color: variables.$primary-white;
+		font-size: 32px;
+		transform: rotate(-2deg);
+		@media (max-width: 920px) {
+			font-size: 48px;
+			line-height: 60px;
+			padding: 37px 50px;
+		}
+	}
+}

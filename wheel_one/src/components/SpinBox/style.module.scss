@@ -1,0 +1,138 @@
+@use '@/shared/styles/variables.scss' as variables;
+
+.box {
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+	margin: 0 auto;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 53px 0px 0px 0px;
+	overflow: hidden;
+	@media (max-width: 920px) {
+		padding-top: 200px;
+	}
+}
+
+.background {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	@media (max-width: 1900px) {
+		object-fit: cover;
+	}
+}
+
+.title {
+	color: variables.$primary-white;
+	font-family: variables.$inter;
+	font-size: 96px;
+	font-weight: 600;
+	@media (max-width: 920px) {
+		font-size: 120px;
+	}
+}
+
+.content {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	top: 55%;
+	left: 0;
+	transform: translateY(-50%);
+	@media (max-width: 1900px) {
+		position: relative;
+		top: 0;
+		transform: translateY(0);
+		flex-direction: column;
+		height: 100vh;
+	}
+	@media (max-width: 920px) {
+		height: auto;
+		gap: 1000px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		height: 227px;
+		width: 50%;
+	}
+	&__left {
+		justify-content: flex-start;
+		padding: 37px 0px 37px 108px;
+		background: linear-gradient(
+			to right,
+			rgba(167, 77, 157, 0) 0%,
+			#a60ede 50%,
+			#a60ede 100%
+		);
+		@media (max-width: 1900px) {
+			width: 100%;
+			height: auto;
+			background: none;
+			justify-content: center;
+		}
+		@media (max-width: 920px) {
+			width: auto;
+			padding: 0px 120px;
+			margin-top: 66px;
+		}
+		.content__title {
+			max-width: 450px;
+			text-align: center;
+			@media (max-width: 1900px) {
+				max-width: 100%;
+			}
+			@media (max-width: 920px) {
+				font-size: 55px;
+			}
+		}
+	}
+	&__right {
+		justify-content: flex-end;
+		padding: 73px 63px 85px 0px;
+		background: linear-gradient(
+			to left,
+			rgba(167, 77, 157, 0) 0%,
+			#a60ede 50%,
+			#a60ede 100%
+		);
+		@media (max-width: 1900px) {
+			width: 100%;
+			height: auto;
+			background: none;
+			justify-content: center;
+			background-color: rgba($color: #bc12e6, $alpha: 0.5);
+			max-width: 574px;
+			padding: 26px 0px;
+			margin-bottom: 40px;
+		}
+
+		.content__title {
+			font-size: 48px;
+			@media (max-width: 920px) {
+				max-width: 682px;
+			}
+			span {
+				font-size: 64px;
+			}
+		}
+	}
+	&__title {
+		font-size: 41px;
+		color: variables.$primary-white;
+		font-family: variables.$cera;
+
+		span {
+			color: variables.$primary-green;
+		}
+	}
+}

@@ -1,0 +1,107 @@
+@use '@/shared/styles/variables.scss' as variables;
+
+.box {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.decoration {
+	position: absolute;
+	z-index: 10;
+}
+
+.chips {
+	top: 11%;
+	right: 3%;
+	@media (max-width: 1900px) {
+		right: -5%;
+		top: 20%;
+	}
+	@media (max-width: 1500px) {
+		max-width: 400px;
+		right: 10%;
+		top: 25%;
+	}
+	@media (max-width: 920px) {
+		max-width: 610px;
+		right: -25%;
+		top: 25%;
+	}
+	@media (max-width: 860px) {
+		width: 50vw;
+		max-width: 500px;
+		right: -20%;
+		top: 30%;
+	}
+}
+
+.dollars {
+	top: 13%;
+	left: 10%;
+	@media (max-width: 1900px) {
+		left: 5%;
+		top: 20%;
+	}
+	@media (max-width: 1500px) {
+		max-width: 400px;
+		left: 10%;
+		top: 25%;
+	}
+	@media (max-width: 920px) {
+		max-width: 300px;
+		left: -5%;
+		top: 30%;
+	}
+	@media (max-width: 860px) {
+		width: 50vw;
+		max-width: 500px;
+		left: -20%;
+		top: 30%;
+	}
+}
+
+.gifs {
+	bottom: 0;
+	left: 0;
+	@media (max-width: 1500px) {
+		max-width: 400px;
+		bottom: 18%;
+		left: 18%;
+	}
+	@media (max-width: 920px) {
+		max-width: 602px;
+		left: -15%;
+		bottom: 25%;
+	}
+	@media (max-width: 860px) {
+		width: 50vw;
+		max-width: 500px;
+		left: 0%;
+		bottom: 20%;
+	}
+}
+
+.sport {
+	bottom: 0;
+	right: 5%;
+	@media (max-width: 1500px) {
+		max-width: 400px;
+		bottom: 15%;
+		right: 15%;
+	}
+	@media (max-width: 920px) {
+		max-width: 500px;
+		right: -15%;
+		bottom: 20%;
+	}
+	@media (max-width: 860px) {
+		width: 50vw;
+		max-width: 500px;
+		right: 0%;
+		bottom: 20%;
+	}
+}

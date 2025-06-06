@@ -1,0 +1,117 @@
+@use '@/shared/styles/variables.scss' as variables;
+
+.wheel {
+	&__inside {
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 15;
+		@media (max-width: 920px) {
+			top: 70%;
+			transform: translate(-50%, -50%);
+			width: 550px;
+		}
+	}
+	&__outside {
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+		@media (max-width: 920px) {
+			top: 70%;
+			transform: translate(-50%, -50%);
+			width: 850px;
+		}
+	}
+	&__cursor {
+		position: absolute;
+		top: 63%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 17;
+		@media (max-width: 920px) {
+			top: 68%;
+		}
+	}
+	&__button {
+		background: none;
+		outline: none;
+		border: none;
+		position: absolute;
+		right: 12%;
+		bottom: 50%;
+		transform: translateY(50%);
+		z-index: 4;
+
+		@media (max-width: 1750px) {
+			transform: translateY(50%) scale(0.7);
+			right: 30%;
+			bottom: 60%;
+		}
+		@media (max-width: 920px) {
+			transform: translateY(50%) scale(1);
+			right: 15%;
+			bottom: 60%;
+		}
+
+		&_desktop {
+			@media (max-width: 1750px) {
+				display: none;
+			}
+		}
+
+		&_mobile {
+			display: none;
+
+			@media (max-width: 1750px) {
+				display: block;
+			}
+		}
+	}
+	&__win {
+		&_outside {
+			position: absolute;
+			top: 49.2%;
+			left: 48.5%;
+			transform: rotate(-3deg) translate(-50%, -50%);
+			z-index: 11;
+			opacity: 0;
+			@media (max-width: 1400px) {
+				left: 48%;
+			}
+			@media (max-width: 1000px) {
+				left: 47%;
+			}
+			@media (max-width: 920px) {
+				left: 45.2%;
+				top: 59.8%;
+				transform: rotate(-2deg) translate(-50%, -50%) scale(1.2);
+			}
+		}
+		&_inside {
+			position: absolute;
+			top: 54.5%;
+			left: 48.8%;
+			transform: rotate(-2deg) translate(-50%, -50%);
+			z-index: 16;
+			opacity: 0;
+			@media (max-width: 1400px) {
+				left: 48.4%;
+			}
+			@media (max-width: 1000px) {
+				left: 47.5%;
+				transform: rotate(-1deg) translate(-50%, -50%);
+			}
+			@media (max-width: 920px) {
+				left: 46.5%;
+				top: 63%;
+				transform: rotate(-1deg) translate(-50%, -50%) scale(1.2);
+			}
+		}
+		&_active {
+			opacity: 1;
+		}
+	}
+}

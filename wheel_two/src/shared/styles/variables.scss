@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'Cera_black';
+	src: url('/fonts/CeraPro-Black.woff2') format('woff2');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cera_medium';
+	src: url('/fonts/CeraPro-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cera_bold';
+	src: url('/fonts/CeraPro-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+$inter: 'Inter', sans-serif;
+$cera: 'Cera_black', sans-serif;
+$cera_medium: 'Cera_medium', sans-serif;
+$cera_bold: 'Cera_bold', sans-serif;
+
+$primary-pink: #ff00a2;
+$secondary-pink: #ff168e;
+$primary-white: #ffffff;
+$primary-black: #000000;
+$primary-green: #0aff5b;
+$secondary-green: #85ff08;
+$secondary-black: #21213a;
+$primary-purple: #af13ff;
+$secondary-purple: #7f0ff0;
+$primary-gray: #3d455a;
